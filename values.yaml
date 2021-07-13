@@ -1,0 +1,13 @@
+service:
+  name: nginx-webserver
+  namespace: test
+  type: NodePort
+  port: 30254
+
+replicaCount: 3
+image:
+    name: nginx
+    tag: 1.14
+    pullpolicy: IfNotPresent
+volume:
+    name: nginx-confimap
